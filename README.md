@@ -12,8 +12,8 @@ Esta es una aplicación que utiliza la API de Metrovalencia para obtener los hor
 1. Clona este repositorio:
 
     ```bash
-    git clone <URL_del_repositorio>
-    cd nombre-del-repositorio
+    git clone [<URL_del_repositorio>](https://github.com/GarriguesN/Metrovalencia-API.git)
+    cd Metrovalencia-API
     ```
 
 2. Instala las dependencias:
