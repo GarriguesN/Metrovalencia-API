@@ -37,7 +37,7 @@ Esta es una aplicación que utiliza la API de Metrovalencia para obtener los hor
 1. Inicia el servidor proxy:
 
     ```bash
-    node services/proxy.cjs
+    node application/mvapi/server/proxy.cjs
     ```
 
 2. En una nueva terminal, inicia el servidor de desarrollo de Nuxt.js:
@@ -94,6 +94,8 @@ Esta es una aplicación que utiliza la API de Metrovalencia para obtener los hor
 - `package.json`: Dependencias y scripts del proyecto.
 - `tailwind.config.js`: Configuración de TailwindCSS.
 - `tsconfig.json`: Configuración de TypeScript.
+- `application/mvapi/`: Contiene todos los archivos principales de la aplicación.
+
 
 ## Configuración de PWA
 
