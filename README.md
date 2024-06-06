@@ -2,6 +2,9 @@
 
 Esta es una aplicación que utiliza la API de Metrovalencia para obtener los horarios de los metros en cada una de las paradas. La aplicación está desarrollada en Nuxt.js y utiliza un servidor proxy con Express (Node.js) para realizar las peticiones a la API y recoger los datos.
 
+> [!IMPORTANT]  
+> Si solo quieres el código fuente y no desplegar la aplicación con Docker, puedes encontrar todo el código en la carpeta `application/mvapi/`. Además, en la carpeta `services` se puede observar la API, y el archivo con todas las paradas de metro y sus IDs. Esta estructura facilita el acceso directo al código fuente y los servicios necesarios para interactuar con la API de Metrovalencia.
+
 ## Requisitos
 
 - Node.js v14 o superior
