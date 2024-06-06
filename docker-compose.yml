@@ -1,0 +1,40 @@
+version: '3.9'
+
+services:
+  mvapi:
+    build:
+      context: .
+      dockerfile: ./dockerfile_mvapi
+    container_name: mvapi
+    volumes:
+      - './application/mvapi:/var/www/html'
+      - './certs:/var/www/html/certs'
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+
+  db:
+    container_name: db
+    image: 'mysql:8.2.0'
+    volumes:
+      - './application/db:/var/lib/mysql'
+    environment:
+      - MYSQL_ROOT_PASSWORD=metrovalencia2024
+      - MYSQL_DATABASE=app
+      - MYSQL_USER=mvadmin
+      - MYSQL_PASSWORD=mvalencia2024
+    ports:
+      - '33060:3306'
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - '8080:80'
